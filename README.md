@@ -1,5 +1,8 @@
 # AI Researcher
 
+
+![AI Researcher Preview](assets/project_preview.png)
+
 An autonomous research assistant that decomposes complex queries into hypotheses, launches agents to investigate them using Deepseek Reasoner, and synthesizes a final report.
 
 ## Architecture

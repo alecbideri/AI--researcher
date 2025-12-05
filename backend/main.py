@@ -44,8 +44,6 @@ async def websocket_endpoint(websocket: WebSocket):
 
 @app.get("/generate_pdf")
 async def get_pdf_report(content: str):
-    # In a real app, content might be passed via POST or retrieved from state
-    # For demo, we'll just generate a dummy one or use the query param
     filepath = generate_pdf_report(content)
     return FileResponse(filepath, media_type='application/pdf', filename="report.pdf")
 

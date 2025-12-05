@@ -22,10 +22,6 @@ class DeepseekClient:
             "stream": False
         }
         
-        # Note: deepseek-reasoner might be 'deepseek-coder' or 'deepseek-chat' depending on exact model name availability.
-        # Using 'deepseek-chat' as a safe default fallback if reasoner isn't the exact ID, 
-        # but user asked for reasoner so we try to stick to that intent.
-        # If 'deepseek-reasoner' fails, we might need to fallback.
         
         try:
             response = requests.post(f"{self.base_url}/chat/completions", headers=headers, json=data)
